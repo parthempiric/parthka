@@ -3,13 +3,14 @@ import { getAllPostIds, getPostData } from '../../../lib/posts.ts';
 import type { Metadata } from 'next';
 import parse, { DOMNode, Element, HTMLReactParserOptions } from 'html-react-parser';
 import CodeBlock from '../../../components/CodeBlock';
+import { log } from 'console';
 
 type Props = {
   params: { id: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData((await params).id);
   return {
     title: postData.title,
     description: postData.title,
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }: { params: { id: string } }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData((await params).id);
 
   const options: HTMLReactParserOptions = {
     replace: (domNode: DOMNode) => {

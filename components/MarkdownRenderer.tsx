@@ -14,6 +14,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ contentHtml }) => {
         const codeElement = domNode.children[0] as Element;
         if (codeElement && codeElement.tagName === 'code') {
           const language = codeElement.attribs.class?.replace('language-', '') || 'text';
+          // @ts-ignore
           const code = codeElement.children[0]?.data || '';
           return <CodeBlock language={language} value={code} />;
         }

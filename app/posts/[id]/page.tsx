@@ -25,7 +25,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   const postData = await getPostData((await params).id);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-p-bg text-white min-h-screen">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <article>
           <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>

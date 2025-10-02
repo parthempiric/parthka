@@ -11,6 +11,6 @@ Currently i am student of CS/B Tech, live in India.
 
 Today i created this website for my blogs, I'll share stuff about Computers, Linux, WebDev, Compiter, and Life.
 
-And currently i learn English so writing blogs is helpful for English practice.
+And currently i am learn English so writing blogs is helpful for English practice.
 
 [My GitHub](https://github.com/pdegama)

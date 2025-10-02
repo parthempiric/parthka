@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const allPostsData = getSortedPostsData();
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-p-bg text-white min-h-screen">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold">My Blog</h1>
@@ -19,11 +19,11 @@ export default function Home() {
           <ul>
             {allPostsData.map(({ id, date, title, description }) => (
               <li key={id} className="mb-4">
-                <Link href={`/posts/${id}`} className="text-2xl font-bold text-blue-400 hover:underline">
+                <Link href={`/posts/${id}`} className="text-2xl font-bold text-p-lite hover:underline hover:text-p-primary">
                   {title}
                 </Link>
                 <br />
-                <p className="text-gray-400 text-lg mt-1">{description}</p>
+                <p className="text-sm mt-1 font-mono italic line-clamp-2 text-ellipsis text-p-secondary font-bold opacity-80">{description}</p>
                 <small className="text-gray-500">
                   <time dateTime={date} className='capitalize'>{formatRelativeTime(date)}</time> {/* Use formatRelativeTime */}
                 </small>

@@ -94,6 +94,9 @@ const config: Config = {
               fontStyle: 'italic',
               color: theme('colors.gray.400'),
               marginTop: theme('spacing.6'),
+      fontFamily: {
+        mono: ['var(--font-roboto-mono)'],
+      },
               marginBottom: theme('spacing.6'),
             },
             code: {

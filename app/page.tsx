@@ -1,7 +1,9 @@
+import ShuffleText from '@/components/ShuffleText';
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import type { Metadata } from 'next';
 import { formatRelativeTime } from '../lib/date'; // Import formatRelativeTime
+import "./terminal.css"
 
 export const metadata: Metadata = {
   title: 'Home | Parthka', // Specific title for the homepage
@@ -12,14 +14,17 @@ export default function Home() {
   return (
     <div className="bg-p-bg text-white min-h-screen">
       <div className="max-w-3xl mx-auto px-4 py-8">
-        <header className="text-center mb-8">
+        <header className="text-center mb-8 flex">
+          <h1>
+            <ShuffleText text="Parthka" className="text-4xl font-bold" />
+          </h1>
           <h1 className="text-4xl font-bold">My Blog</h1>
         </header>
         <main>
           <ul>
             {allPostsData.map(({ id, date, title, description }) => (
               <li key={id} className="mb-4">
-                <Link href={`/posts/${id}`} className="text-2xl font-bold text-p-lite hover:underline hover:text-p-primary">
+                <Link href={`/posts/${id}`} className="text-2xl font-bold text-p-primary">
                   {title}
                 </Link>
                 <br />

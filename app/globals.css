@@ -1,18 +1,1 @@
-@import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@theme {
-   --color-p-primary: #483AA0;
-   --color-p-lite: #7965c1;
-   --color-p-secondary: #fae8af;
-   --color-p-bg: #222831;
-}
-
-/* You can add any custom global styles here */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
